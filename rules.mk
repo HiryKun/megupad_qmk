@@ -1,5 +1,6 @@
 # MCU name
 MCU = STM32F103
+MCU_LDSCRIPT = STM32F103xB
 
 #Bootloader
 BOOTLOADER = stm32duino
