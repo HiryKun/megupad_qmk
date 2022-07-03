@@ -192,21 +192,14 @@ static const char PROGMEM rhodes_Fn[] = {
 // 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 // };
 
-// bool anime_played = false;
 bool oled_task_user(void) {
     // Host Keyboard Layer Status
     switch (get_highest_layer(layer_state)) {
         case 0:
-			// if(!anime_played){
-				// reset_anim2();
 				render_anime1();
-			// 	anime_played = true;
-			// }
-			// oled_write_raw_P(rhodes_logo,sizeof(rhodes_logo));
 			break;
         case 1:
-            // render_anime2();
-			oled_write_raw_P(rhodes_Fn,sizeof(rhodes_Fn));
+			render_anime2();
 			reset_anim1();
 			break;
         case 2:
